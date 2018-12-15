@@ -14,10 +14,13 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-3": "^6.24.1",
     "eslint": "^5.10.0",
-    "eslint-config-equimper": "^2.2.2"
+    "eslint-config-equimper": "^2.2.2",
+    "nodemon": "^1.18.9"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/index.js",
+    "build": "babel src -d dist",
+    "test": "nodemon --exec babel-node src/index.js"
   },
   "engines": {
     "node": "8.10.0",
